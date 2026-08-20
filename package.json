@@ -1,0 +1,16 @@
+{
+  "name": "makerspace-challenge-prototype",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A cross-platform Remy wellness reminder prototype",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "node --test test/*.test.js",
+    "package:mac": "electron-packager . \"Remy Wellness\" --platform=darwin --arch=arm64 --out=dist --overwrite --prune=true --app-bundle-id=com.pem2k.remy-wellness-poc --ignore='^/dist($|/)' --ignore='^/test($|/)'"
+  },
+  "devDependencies": {
+    "@electron/packager": "^20.3.0",
+    "electron": "^43.4.1"
+  }
+}

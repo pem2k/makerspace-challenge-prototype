@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; style-src 'self'; script-src 'self'">
+    <title>Remy reminder</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main>
+      <section aria-live="assertive">
+        <p class="eyebrow">Wellness reminder</p>
+        <h1 id="title">Wellness break</h1>
+        <p id="message"></p>
+        <div class="actions">
+          <button id="snooze" class="secondary" type="button">Snooze 5 min</button>
+          <button id="done" class="primary" type="button">Done</button>
+        </div>
+      </section>
+    </main>
+    <script src="popup-renderer.js"></script>
+  </body>
+</html>

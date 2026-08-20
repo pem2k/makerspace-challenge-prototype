@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; style-src 'self'; script-src 'self'">
+    <title>Remy Wellness</title>
+    <link rel="stylesheet" href="settings.css">
+  </head>
+  <body>
+    <main class="shell">
+      <header class="hero">
+        <img src="../../assets/remy-wave.png" alt="Remy the raccoon waving">
+        <div>
+          <p class="eyebrow">Local wellness companion</p>
+          <h1>Small nudges, right on time.</h1>
+          <p>Configure simple wellness reminders for eye rest, movement, and hydration.</p>
+        </div>
+      </header>
+
+      <section class="demo-strip" aria-label="Presentation controls">
+        <div>
+          <strong>Presentation mode</strong>
+          <span>Try the complete reminder experience immediately.</span>
+        </div>
+        <button id="preview" class="primary" type="button">Preview reminder</button>
+      </section>
+
+      <form id="settings-form">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Wellness routine</p>
+            <h2>Choose Remy’s nudges</h2>
+          </div>
+          <p id="save-status" role="status"></p>
+        </div>
+
+        <div class="preset-grid">
+          <article class="preset-card" data-preset="eyeRest">
+            <div class="card-heading"><span class="icon">◉</span><label class="switch"><input class="enabled" type="checkbox"><span></span></label></div>
+            <h3>Eye rest</h3>
+            <p>Use the 20-20-20 rule to give your eyes a screen break.</p>
+            <label class="interval">Remind every <input class="minutes" type="number" min="1" max="480"> minutes</label>
+            <small class="next-due"></small>
+          </article>
+
+          <article class="preset-card" data-preset="stand">
+            <div class="card-heading"><span class="icon">↟</span><label class="switch"><input class="enabled" type="checkbox"><span></span></label></div>
+            <h3>Stand and move</h3>
+            <p>Stand, stretch, or walk for a moment during desk time.</p>
+            <label class="interval">Remind every <input class="minutes" type="number" min="1" max="480"> minutes</label>
+            <small class="next-due"></small>
+          </article>
+
+          <article class="preset-card" data-preset="hydration">
+            <div class="card-heading"><span class="icon">◇</span><label class="switch"><input class="enabled" type="checkbox"><span></span></label></div>
+            <h3>Hydration</h3>
+            <p>A simple, configurable reminder to take a water break.</p>
+            <label class="interval">Remind every <input class="minutes" type="number" min="1" max="480"> minutes</label>
+            <small class="next-due"></small>
+          </article>
+        </div>
+
+        <section class="companion-option">
+          <div>
+            <strong>Show floating Remy</strong>
+            <span>Optional desktop companion. Reminders continue when Remy is hidden.</span>
+          </div>
+          <label class="switch">
+            <input id="show-pet" type="checkbox">
+            <span></span>
+          </label>
+        </section>
+
+        <div class="form-actions">
+          <p>Routine settings are saved on this computer.</p>
+          <button class="primary" type="submit">Save routine</button>
+        </div>
+      </form>
+    </main>
+    <script src="settings-renderer.js"></script>
+  </body>
+</html>
