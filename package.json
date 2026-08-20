@@ -7,7 +7,8 @@
   "scripts": {
     "start": "electron .",
     "test": "node --test test/*.test.js",
-    "package:mac": "electron-packager . \"Remy Wellness\" --platform=darwin --arch=arm64 --out=dist --overwrite --prune=true --app-bundle-id=com.pem2k.remy-wellness-poc --ignore='^/dist($|/)' --ignore='^/test($|/)'"
+    "package:mac": "electron-packager . \"Remy Wellness\" --platform=darwin --arch=arm64 --out=dist --overwrite --prune=true --app-bundle-id=com.pem2k.remy-wellness-poc --ignore='^/dist($|/)' --ignore='^/test($|/)'",
+    "package:windows": "electron-packager . \"Remy Wellness\" --platform=win32 --arch=x64 --out=dist --overwrite --prune=true --ignore=\"^/dist($|/)\" --ignore=\"^/test($|/)\""
   },
   "devDependencies": {
     "@electron/packager": "^20.3.0",

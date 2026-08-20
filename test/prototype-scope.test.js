@@ -25,3 +25,10 @@ test("repository-facing project title is makerspace-challenge-prototype", () => 
   assert.equal(packageJson.name, "makerspace-challenge-prototype");
   assert.match(readme, /^# makerspace-challenge-prototype$/m);
 });
+
+test("project exposes a Windows x64 packaging target", () => {
+  const packageJson = JSON.parse(fs.readFileSync(path.join(PROJECT_ROOT, "package.json"), "utf8"));
+
+  assert.match(packageJson.scripts["package:windows"], /--platform=win32/);
+  assert.match(packageJson.scripts["package:windows"], /--arch=x64/);
+});

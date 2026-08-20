@@ -18,6 +18,6 @@ npm install
 npm start
 ```
 
-Run tests with `npm test`. Build the Apple-silicon macOS presentation app with `npm run package:mac`.
+Run tests with `npm test`. Build the Apple-silicon macOS presentation app with `npm run package:mac`, or the Windows x64 version with `npm run package:windows`.
 
 The existing `remy-reminders` native/server prototype is separate and unchanged.
